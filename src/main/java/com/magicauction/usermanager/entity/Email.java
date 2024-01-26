@@ -58,7 +58,7 @@ public class Email {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Email email = (Email) o;
-        return Objects.equals(id, email.id) && Objects.equals(address, email.address) && Objects.equals(domain, email.domain) && Objects.equals(user, email.user);
+        return address.equals(email.address) && domain.equals(email.domain);
     }
 
     @Override
@@ -72,7 +72,6 @@ public class Email {
                 "id=" + id +
                 ", address='" + address + '\'' +
                 ", domain='" + domain + '\'' +
-                ", user=" + user +
                 '}';
     }
 

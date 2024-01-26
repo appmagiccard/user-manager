@@ -8,12 +8,12 @@ import com.magicauction.usermanager.entity.exceptions.EmailNotValidException;
 import com.magicauction.usermanager.entity.exceptions.PhoneNumberNotValidException;
 import com.magicauction.usermanager.utils.HashUtils;
 
-public class Converter {
+public abstract class Converter {
     public static UserDto toDto(User u){
         return new UserDto(
                 u.getUserId(),
                 u.getName(),
-                u.getEncryptedPassword(),
+                HashUtils.decrypt(u.getEncryptedPassword()),
                 u.getTradeArea(),
                 u.getEmail() == null ? "" : u.getEmail().stringValue(),
                 u.getPhoneNumber() == null ? "" : u.getPhoneNumber().stringValue(),

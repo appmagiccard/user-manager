@@ -184,7 +184,7 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(userId, user.userId) && Objects.equals(name, user.name) && Objects.equals(encryptedPassword, user.encryptedPassword) && Objects.equals(tradeArea, user.tradeArea) && Objects.equals(email, user.email) && Objects.equals(phoneNumber, user.phoneNumber) && Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName) && Objects.equals(myPublications, user.myPublications) && Objects.equals(myPublisherOffers, user.myPublisherOffers) && Objects.equals(myBuyerOffers, user.myBuyerOffers);
+        return isActive == user.isActive && Objects.equals(userId, user.userId) && name.equals(user.name) && encryptedPassword.equals(user.encryptedPassword) && tradeArea.equals(user.tradeArea) && email.equals(user.email) && phoneNumber.equals(user.phoneNumber) && firstName.equals(user.firstName) && lastName.equals(user.lastName);
     }
 
     @Override

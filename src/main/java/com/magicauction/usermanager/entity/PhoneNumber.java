@@ -84,7 +84,6 @@ public class PhoneNumber {
                 ", city='" + city + '\'' +
                 ", number='" + number + '\'' +
                 ", type='" + type + '\'' +
-                ", user=" + user +
                 '}';
     }
 
@@ -93,7 +92,7 @@ public class PhoneNumber {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PhoneNumber that = (PhoneNumber) o;
-        return Objects.equals(id, that.id) && Objects.equals(prefix, that.prefix) && Objects.equals(country, that.country) && Objects.equals(city, that.city) && Objects.equals(number, that.number) && Objects.equals(type, that.type) && Objects.equals(user, that.user);
+        return Objects.equals(prefix, that.prefix) && Objects.equals(country, that.country) && Objects.equals(city, that.city) && Objects.equals(number, that.number) && Objects.equals(type, that.type);
     }
 
     @Override
